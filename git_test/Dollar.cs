@@ -9,7 +9,10 @@ namespace git_test
     class Dollar
     {
         public int amount = 10;
-        public Dollar(int amount) { }
-        public void times(int multiplier) { }
+        public Dollar(int amount) { this.amount = amount; }
+        public Dollar Times(int multiplier)
+        {
+            return new Dollar(amount * multiplier);
+        }
     }
 }

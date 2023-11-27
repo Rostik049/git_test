@@ -10,8 +10,10 @@ namespace git_test
         public void testMultiplication()
         {
             Dollar five = new Dollar(5);
-            five.times(2);
-            Assert.AreEqual(10, five.amount);
+            Dollar product = five.Times(2);
+            Assert.AreEqual(10, product.amount);
+            product = five.Times(3);
+            Assert.AreEqual(15, product.amount);
         }
     }
 }
