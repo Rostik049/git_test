@@ -14,5 +14,11 @@ namespace git_test
         {
             return new Dollar(amount * multiplier);
         }
+
+        public bool Equals(Object o)
+        {
+            Dollar dollar = (Dollar)o;
+            return amount == dollar.amount;
+        }
     }
 }

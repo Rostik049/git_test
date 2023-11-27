@@ -15,5 +15,12 @@ namespace git_test
             product = five.Times(3);
             Assert.AreEqual(15, product.amount);
         }
+
+        [TestMethod]
+        public void testEquality()
+        {
+            Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
+            Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
+        }
     }
 }
